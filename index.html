@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Knight 3D Model using WEBGL</title>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+        #canvas-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        #canvas {
+            width: 100%;
+            height: 100%;
+        }
+        #info-container {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+            pointer-events: none; 
+        }
+        #info-container h2, #info-container h3, #info-container p {
+            margin: 5px 0;
+        }
+        /* Card tambahan di kanan atas */
+        #card-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+            text-align: center;
+            font-size: 14px;
+        }
+        #card-container h3 {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            color: #333;
+        }
+        #card-container p {
+            margin: 5px 0;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- Container untuk Canvas -->
+    <div id="canvas-container">
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <!-- Card Informasi di Kiri Atas -->
+    <div id="info-container">
+        <h2>3D Chess Knight</h2>
+        <p>Tugas WebGL - Grafika Komputer</p>
+    </div>
+
+    <!-- Card Informasi di Kanan Atas -->
+    <div id="card-container">
+        <p><strong>Nama:</strong> Richo Yudha Kurniawan</p>
+        <p><strong>NRP:</strong> 5025221242</p>
+    </div>
+
+    <script src="webgl-utils.js"></script>
+    <script src="m4.js"></script>
+    <script type="module" src="main.js"></script>
+
+</body>
+</html>
